@@ -27,8 +27,8 @@
     "require": {
         "http-interop/http-factory-guzzle": "^1.2",
         "laravel/scout": "^9.2",
-        "laravel-enso/core": "^8.0",
-        "php": ">=8.0",
+        "laravel-enso/core": "^9.0",
+        "php": "^8.0",
         "meilisearch/meilisearch-php": "^0.19"
     },
     "autoload": {
