@@ -4,6 +4,7 @@ namespace LaravelEnso\MeiliSearch\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use LaravelEnso\MeiliSearch\Database\Factories\SettingsFactory;
 use LaravelEnso\Rememberable\Traits\Rememberable;
 
 class Settings extends Model
@@ -16,7 +17,7 @@ class Settings extends Model
 
     protected array $rememberableKeys = ['id'];
 
-    private static self $instance;
+    private static ?self $instance = null;
 
     public static function current()
     {
@@ -35,5 +36,10 @@ class Settings extends Model
         return [
             'enabled' => 'boolean',
         ];
+    }
+
+    protected static function newFactory(): SettingsFactory
+    {
+        return SettingsFactory::new();
     }
 }
