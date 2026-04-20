@@ -1,7 +1,7 @@
 {
     "name": "laravel-enso/meili-search",
     "type": "library",
-    "description": "meilisearch integration",
+    "description": "Meilisearch integration for Laravel Enso",
     "authors": [
         {
             "name": "Adrian Ocneanu",
@@ -22,8 +22,13 @@
             "role": "Developer"
         }
     ],
-    "keywords": [],
-    "homepage": "https://www.laravel-enso.com",
+    "keywords": [
+        "enso",
+        "meilisearch",
+        "search"
+    ],
+    "homepage": "https://github.com/laravel-enso/meili-search",
+    "license": "MIT",
     "require": {
         "http-interop/http-factory-guzzle": "^1.2",
         "laravel/scout": "^9.2",
