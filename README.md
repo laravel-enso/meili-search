@@ -95,6 +95,10 @@ Required external packages:
 - [`laravel/scout`](https://github.com/laravel/scout) [↗](https://github.com/laravel/scout)
 - [`meilisearch/meilisearch-php`](https://github.com/meilisearch/meilisearch-php) [↗](https://github.com/meilisearch/meilisearch-php)
 
+Companion frontend package:
+
+- [`@enso-ui/meili-search`](https://docs.laravel-enso.com/frontend/meili-search.html) [↗](https://github.com/enso-ui/meili-search)
+
 ## Contributions
 
 are welcome. Pull requests are great, but issues are good too.
