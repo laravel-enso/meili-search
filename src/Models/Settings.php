@@ -4,12 +4,12 @@ namespace LaravelEnso\MeiliSearch\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Config;
 use LaravelEnso\MeiliSearch\Database\Factories\SettingsFactory;
-use LaravelEnso\Rememberable\Traits\Rememberable;
 
 class Settings extends Model
 {
-    use HasFactory, Rememberable;
+    use HasFactory;
 
     protected $table = 'meilisearch_settings';
 
@@ -22,7 +22,7 @@ class Settings extends Model
     public static function current()
     {
         return self::$instance
-            ??= self::cacheGet(1)
+            ??= self::find(Config::get('enso.meilisearch.settingsId'))
             ?? self::factory()->create();
     }
 
