@@ -21,9 +21,11 @@ class Settings extends Model
 
     public static function current(): self
     {
+        $id = Config::get('enso.meilisearch.settingsId');
+
         return self::$instance
-            ??= self::find(Config::get('enso.meilisearch.settingsId'))
-            ?? self::factory()->create();
+            ??= self::find($id)
+            ?? self::factory()->create(['id' => $id]);
     }
 
     public static function enabled()
